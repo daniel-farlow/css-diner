@@ -46,7 +46,10 @@ Description
 <details><summary> HTML Viewer</summary>
 
 ```html
-HTMLCONTENT
+<div class="table">
+    <plate />
+    <plate />
+</div>
 ```
 
 </details>
@@ -72,7 +75,11 @@ CSSCONTENT
 <details><summary> HTML Viewer</summary>
 
 ```html
-HTMLCONTENT
+<div class="table">
+    <bento />
+    <plate />
+    <bento />
+</div>
 ```
 
 </details>
@@ -98,7 +105,11 @@ CSSCONTENT
 <details><summary> HTML Viewer</summary>
 
 ```html
-HTMLCONTENT
+<div class="table">
+    <plate id="fancy" />
+    <plate />
+    <bento />
+</div>
 ```
 
 </details>
@@ -124,7 +135,13 @@ CSSCONTENT
 <details><summary> HTML Viewer</summary>
 
 ```html
-HTMLCONTENT
+<div class="table">
+    <bento />
+    <plate>
+        <apple />
+    </plate>
+    <apple />
+</div>
 ```
 
 </details>
@@ -150,7 +167,17 @@ CSSCONTENT
 <details><summary> HTML Viewer</summary>
 
 ```html
-HTMLCONTENT
+<div class="table">
+    <bento>
+        <orange />
+    </bento>
+    <plate id="fancy">
+        <pickle />
+    </plate>
+    <plate>
+        <pickle />
+    </plate>
+</div>
 ```
 
 </details>
@@ -176,7 +203,14 @@ CSSCONTENT
 <details><summary> HTML Viewer</summary>
 
 ```html
-HTMLCONTENT
+<div class="table">
+    <apple />
+    <apple class="small" />
+    <plate>
+        <apple class="small" />
+    </plate>
+    <plate />
+</div>
 ```
 
 </details>
@@ -202,7 +236,19 @@ CSSCONTENT
 <details><summary> HTML Viewer</summary>
 
 ```html
-HTMLCONTENT
+<div class="table">
+    <apple />
+    <apple class="small" />
+    <bento>
+        <orange class="small" />
+    </bento>
+    <plate>
+        <orange />
+    </plate>
+    <plate>
+        <orange class="small" />
+    </plate>
+</div>
 ```
 
 </details>
@@ -228,7 +274,21 @@ CSSCONTENT
 <details><summary> HTML Viewer</summary>
 
 ```html
-HTMLCONTENT
+<div class="table">
+    <bento>
+        <orange />
+    </bento>
+    <orange class="small" />
+    <bento>
+        <orange class="small" />
+    </bento>
+    <bento>
+        <apple class="small" />
+    </bento>
+    <bento>
+        <orange class="small" />
+    </bento>
+</div>
 ```
 
 </details>
@@ -254,7 +314,21 @@ CSSCONTENT
 <details><summary> HTML Viewer</summary>
 
 ```html
-HTMLCONTENT
+<div class="table">
+    <pickle class="small" />
+    <pickle />
+    <plate>
+        <pickle />
+    </plate>
+    <bento>
+        <pickle />
+    </bento>
+    <plate>
+        <pickle />
+    </plate>
+    <pickle />
+    <pickle class="small" />
+</div>
 ```
 
 </details>
@@ -280,7 +354,17 @@ CSSCONTENT
 <details><summary> HTML Viewer</summary>
 
 ```html
-HTMLCONTENT
+<div class="table">
+    <apple />
+    <plate>
+        <orange class="small" />
+    </plate>
+    <bento />
+    <bento>
+        <orange />
+    </bento>
+    <plate id="fancy" />
+</div>
 ```
 
 </details>
@@ -306,7 +390,18 @@ CSSCONTENT
 <details><summary> HTML Viewer</summary>
 
 ```html
-HTMLCONTENT
+<div class="table">
+    <plate id="fancy">
+        <orange class="small" />
+    </plate>
+    <plate>
+        <pickle />
+    </plate>
+    <apple class="small" />
+    <plate>
+        <apple />
+    </plate>
+</div>
 ```
 
 </details>
@@ -332,7 +427,17 @@ CSSCONTENT
 <details><summary> HTML Viewer</summary>
 
 ```html
-HTMLCONTENT
+<div class="table">
+    <bento>
+        <apple class="small" />
+    </bento>
+    <plate />
+    <apple class="small" />
+    <plate />
+    <apple />
+    <apple class="small" />
+    <apple class="small" />
+</div>
 ```
 
 </details>
@@ -358,7 +463,20 @@ CSSCONTENT
 <details><summary> HTML Viewer</summary>
 
 ```html
-HTMLCONTENT
+<div class="table">
+    <pickle />
+    <bento>
+        <orange class="small" />
+    </bento>
+    <pickle class="small" />
+    <pickle />
+    <plate>
+        <pickle />
+    </plate>
+    <plate>
+        <pickle class="small" />
+    </plate>
+</div>
 ```
 
 </details>
@@ -384,7 +502,19 @@ CSSCONTENT
 <details><summary> HTML Viewer</summary>
 
 ```html
-HTMLCONTENT
+<div class="table">
+    <plate>
+        <bento>
+            <apple />
+        </bento>
+    </plate>
+    <plate>
+        <apple />
+    </plate>
+    <plate />
+    <apple />
+    <apple class="small" />
+</div>
 ```
 
 </details>
@@ -410,7 +540,16 @@ CSSCONTENT
 <details><summary> HTML Viewer</summary>
 
 ```html
-HTMLCONTENT
+<div class="table">
+    <bento />
+    <plate />
+    <plate>
+        <orange />
+        <orange />
+        <orange />
+    </plate>
+    <pickle class="small" />
+</div>
 ```
 
 </details>
@@ -436,7 +575,22 @@ CSSCONTENT
 <details><summary> HTML Viewer</summary>
 
 ```html
-HTMLCONTENT
+<div class="table">
+    <plate>
+        <apple />
+    </plate>
+    <plate>
+        <pickle />
+    </plate>
+    <bento>
+        <pickle />
+    </bento>
+    <plate>
+        <orange class="small" />
+        <orange />
+    </plate>
+    <pickle class="small" />
+</div>
 ```
 
 </details>
@@ -462,7 +616,17 @@ CSSCONTENT
 <details><summary> HTML Viewer</summary>
 
 ```html
-HTMLCONTENT
+<div class="table">
+    <plate id="fancy">
+        <apple class="small" />
+    </plate>
+    <plate />
+    <plate>
+        <orange class="small" />
+        <orange />
+    </plate>
+    <pickle class="small" />
+</div>
 ```
 
 </details>
@@ -488,7 +652,12 @@ CSSCONTENT
 <details><summary> HTML Viewer</summary>
 
 ```html
-HTMLCONTENT
+<div class="table">
+    <plate />
+    <plate />
+    <plate />
+    <plate id="fancy" />
+</div>
 ```
 
 </details>
@@ -514,7 +683,16 @@ CSSCONTENT
 <details><summary> HTML Viewer</summary>
 
 ```html
-HTMLCONTENT
+<div class="table">
+    <plate />
+    <bento />
+    <plate>
+        <orange />
+        <orange />
+        <orange />
+    </plate>
+    <bento />
+</div>
 ```
 
 </details>
@@ -540,7 +718,17 @@ CSSCONTENT
 <details><summary> HTML Viewer</summary>
 
 ```html
-HTMLCONTENT
+<div class="table">
+    <orange class="small" />
+    <apple />
+    <apple class="small" />
+    <apple />
+    <apple class="small" />
+    <plate>
+        <orange class="small" />
+        <orange />
+    </plate>
+</div>
 ```
 
 </details>
@@ -566,7 +754,14 @@ CSSCONTENT
 <details><summary> HTML Viewer</summary>
 
 ```html
-HTMLCONTENT
+<div class="table">
+    <plate />
+    <plate />
+    <plate />
+    <plate />
+    <plate id="fancy" />
+    <plate />
+</div>
 ```
 
 </details>
@@ -592,7 +787,20 @@ CSSCONTENT
 <details><summary> HTML Viewer</summary>
 
 ```html
-HTMLCONTENT
+<div class="table">
+    <plate />
+    <plate>
+        <pickle class="small" />
+    </plate>
+    <plate>
+        <apple class="small" />
+    </plate>
+    <plate />
+    <plate>
+        <apple />
+    </plate>
+    <plate />
+</div>
 ```
 
 </details>
@@ -618,7 +826,18 @@ CSSCONTENT
 <details><summary> HTML Viewer</summary>
 
 ```html
-HTMLCONTENT
+<div class="table">
+    <plate id="fancy">
+        <apple class="small" />
+        <apple />
+    </plate>
+    <plate>
+        <apple class="small" />
+    </plate>
+    <plate>
+        <pickle />
+    </plate>
+</div>
 ```
 
 </details>
@@ -644,7 +863,14 @@ CSSCONTENT
 <details><summary> HTML Viewer</summary>
 
 ```html
-HTMLCONTENT
+<div class="table">
+    <orange class="small" />
+    <orange class="small" />
+    <pickle />
+    <pickle />
+    <apple class="small" />
+    <apple class="small" />
+</div>
 ```
 
 </details>
@@ -670,7 +896,14 @@ CSSCONTENT
 <details><summary> HTML Viewer</summary>
 
 ```html
-HTMLCONTENT
+<div class="table">
+    <bento />
+    <bento>
+        <pickle class="small" />
+    </bento>
+    <plate />
+    <bento />
+</div>
 ```
 
 </details>
@@ -696,7 +929,19 @@ CSSCONTENT
 <details><summary> HTML Viewer</summary>
 
 ```html
-HTMLCONTENT
+<div class="table">
+    <plate id="fancy">
+        <apple class="small" />
+    </plate>
+    <plate>
+        <apple />
+    </plate>
+    <apple />
+    <plate>
+        <orange class="small" />
+    </plate>
+    <pickle class="small" />
+</div>
 ```
 
 </details>
@@ -722,7 +967,19 @@ CSSCONTENT
 <details><summary> HTML Viewer</summary>
 
 ```html
-HTMLCONTENT
+<div class="table">
+    <bento>
+        <apple class="small" />
+    </bento>
+    <apple for="Ethan" />
+    <plate for="Alice">
+        <pickle />
+    </plate>
+    <bento for="Clara">
+        <orange />
+    </bento>
+    <pickle />
+</div>
 ```
 
 </details>
@@ -748,7 +1005,18 @@ CSSCONTENT
 <details><summary> HTML Viewer</summary>
 
 ```html
-HTMLCONTENT
+<div class="table">
+    <plate for="Sarah">
+        <pickle />
+    </plate>
+    <plate for="Luke">
+        <apple />
+    </plate>
+    <plate />
+    <bento for="Steve">
+        <orange />
+    </bento>
+</div>
 ```
 
 </details>
@@ -774,7 +1042,16 @@ CSSCONTENT
 <details><summary> HTML Viewer</summary>
 
 ```html
-HTMLCONTENT
+<div class="table">
+    <apple for="Alexei" />
+    <bento for="Albina">
+        <apple />
+    </bento>
+    <bento for="Vitaly">
+        <orange />
+    </bento>
+    <pickle />
+</div>
 ```
 
 </details>
@@ -800,7 +1077,17 @@ CSSCONTENT
 <details><summary> HTML Viewer</summary>
 
 ```html
-HTMLCONTENT
+<div class="table">
+    <plate for="Sam">
+        <pickle />
+    </plate>
+    <bento for="Sarah">
+        <apple class="small" />
+    </bento>
+    <bento for="Mary">
+        <orange />
+    </bento>
+</div>
 ```
 
 </details>
@@ -826,7 +1113,17 @@ CSSCONTENT
 <details><summary> HTML Viewer</summary>
 
 ```html
-HTMLCONTENT
+<div class="table">
+    <apple class="small" />
+    <bento for="Hayato">
+        <pickle />
+    </bento>
+    <apple for="Ryota" />
+    <plate for="Minato">
+        <orange />
+    </plate>
+    <pickle class="small" />
+</div>
 ```
 
 </details>
@@ -852,7 +1149,17 @@ CSSCONTENT
 <details><summary> HTML Viewer</summary>
 
 ```html
-HTMLCONTENT
+<div class="table">
+    <bento for="Robbie">
+        <apple />
+    </bento>
+    <bento for="Timmy">
+        <pickle />
+    </bento>
+    <bento for="Bobby">
+        <orange />
+    </bento>
+</div>
 ```
 
 </details>
