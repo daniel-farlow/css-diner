@@ -59,8 +59,6 @@ Hint
 
 </details>
 
-<input type="text" placeholder="CSS code here">
-
 <details><summary> CSS Viewer (i.e., possible solution(s))</summary>
 
 ```css
@@ -105,7 +103,7 @@ HTMLCONTENT
 
 </details>
 
-<img src="https://user-images.githubusercontent.com/52146855/65302959-ac857100-db4a-11e9-8d01-14f9c11b64fc.gif)"/>
+<img src="https://user-images.githubusercontent.com/52146855/65302959-ac857100-db4a-11e9-8d01-14f9c11b64fc.gif"/>
 
 <details><summary> Hint (or see <a href="#css-selector-descriptions-and-examples"> selector reference</a>)</summary>
 
@@ -157,7 +155,7 @@ HTMLCONTENT
 
 </details>
 
-<img src="https://user-images.githubusercontent.com/52146855/65302961-ac857100-db4a-11e9-8fdc-1b653ae25339.gif)"/>
+<img src="https://user-images.githubusercontent.com/52146855/65302961-ac857100-db4a-11e9-8fdc-1b653ae25339.gif"/>
 
 <details><summary> Hint (or see <a href="#css-selector-descriptions-and-examples"> selector reference</a>)</summary>
 
@@ -365,7 +363,7 @@ HTMLCONTENT
 
 </details>
 
-<img src="https://user-images.githubusercontent.com/52146855/65302969-ad1e0780-db4a-11e9-880f-918d4e2cfe8d.gif)"/>
+<img src="https://user-images.githubusercontent.com/52146855/65302969-ad1e0780-db4a-11e9-880f-918d4e2cfe8d.gif"/>
 
 <details><summary> Hint (or see <a href="#css-selector-descriptions-and-examples"> selector reference</a>)</summary>
 
@@ -391,7 +389,7 @@ HTMLCONTENT
 
 </details>
 
-<img src="https://user-images.githubusercontent.com/52146855/65302971-ad1e0780-db4a-11e9-914f-28d20891e941.gif)"/>
+<img src="https://user-images.githubusercontent.com/52146855/65302971-ad1e0780-db4a-11e9-914f-28d20891e941.gif"/>
 
 <details><summary> Hint (or see <a href="#css-selector-descriptions-and-examples"> selector reference</a>)</summary>
 
