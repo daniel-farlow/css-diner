@@ -39,7 +39,554 @@ Description
 
 ## CSS Selector Descriptions and Examples
 
-[All levels](#contents) may or may not.
+### Type
+
+```css
+A
+```
+
+Selects all elements of type `A`. Type refers to the type of tag, so `<div>`, `<p>`, and `<ul>` are all different element types. 
+
+```css
+/* EXAMPLES */
+
+div {
+    /* style all <div> elements */
+}
+
+p {
+    /* style all <p> elements */
+}
+```
+
+### ID Selector
+
+```css
+#id
+```
+
+Selects an element with a specific `id`. 
+
+```css
+/* EXAMPLES */
+
+#cool {
+    /* style the element with id="cool" */
+}
+
+/* you can also combine the ID selector with the type selector */
+
+ul#long {
+    /* style the element <ul id="long"> */
+}
+```
+
+### Descendant Selector
+
+```css
+A B
+```
+
+Selects all elements `B` that are children of `A`; that is, `A B` is how you select an element(s) `B` that is inside another element `A`.
+
+```css
+/* EXAMPLES */
+
+p strong {
+    /* style <strong> elements that are children of <p> elements */
+}
+
+#fancy span {
+    /* style any <span> elements that are inside of the element with id="fancy" */
+}
+```
+
+### Combine Descendant and ID Selectors
+
+```css
+#id A
+```
+
+You can combine any selector with the descendant selector.
+
+```css
+/* EXAMPLE */
+
+#cool span {
+    /* style all <span> elements that are inside of the element with id="cool" */
+}
+```
+
+### Class Selector
+
+```css
+.classname
+```
+
+Select elements by their class. The class selector selects all elements with that class attribute. Elements can only have one ID, but many classes.
+
+```css
+/* EXAMPLE */
+
+.neato {
+    /* style all elements with class="neato" */
+}
+```
+
+### Combining the Class Selector with Other Selectors
+
+```css
+A.className
+```
+
+You can combine the class selector with other selectors, like the type selector.
+
+```css
+/* EXAMPLES */
+
+ul.important {
+    /* style <ul> elements that have class="important" */
+}
+
+#big.wide {
+    /* style the element with id="big" that also has class="wide" */
+}
+```
+
+### Combining Selectors with Commas
+
+```css
+A, B
+```
+
+You can select all `A` and `B` elements (or all `A`, `B`, and `C` elements with `A, B, C`, etc.). 
+
+```css
+/* EXAMPLES */
+
+p, .fun {
+    /* style all <p> elements as well as all elements with class="fun" */
+}
+
+a, p, div {
+    /* style all <a>, <p>, and <div> elements */
+}
+```
+
+### Universal Selector 
+
+```css
+*
+```
+
+You can select all elements with the universal selector `*` (also known as a wildcard).
+
+```css
+/* EXAMPLES */
+
+p * {
+    /* style all elements inside of all <p> elements */
+}
+
+ul.fancy * {
+    /* style every element inside all <ul class="fancy"> elements */
+}
+```
+
+### Adjacent Sibling Selector
+
+```css
+A + B
+```
+
+This selects all `B` elements that direct follow `A` elements. Elements that follow one another are called siblings. They're on the same level or depth. In the HTML markup, elements that are siblings should have the same indentation level.
+
+```css
+/* EXAMPLES */
+
+p + .intro {
+    /* styles every element with class="intro" that directly follows a <p> */
+}
+
+div + a {
+    /* style every <a> element that directly follows a <div> */
+}
+```
+
+### General Sibling Selector
+
+```css
+A ~ B
+```
+
+Selects all elements `B` that follow an element `A`; that is, you can select all siblings of an element that follow it. This is sort of like the adjacent sibling selector (i.e., `A + B`) except `A ~ B` gets *all* of the following sibling elements instead of just the direct next one. 
+
+```css
+/* EXAMPLE */
+
+div.main-intro ~ p {
+    /* style all elements <p> after <div class="main-intro"> that are on the same level as the div */
+}
+```
+
+### Child Selector
+
+```css
+A > B
+```
+
+Selects all `B` that are direct children of `A`. You can select elements that are direct children of other elements. A child element is any element that is nested directly in another element. Elements that are nested deeper than that are called descendant elements.
+
+```css
+/* EXAMPLE */
+
+div#container > ul {
+    /* style all <ul> elements that are children of <div id="container"> */
+}
+```
+
+### First Child Pseudo-selector
+
+```css
+A:first-child
+```
+
+Selects all first-child elements that are of type `A`. A child element is any element that is directly nested in another element. You can combine this pseudo-selector with other selectors.
+
+```css
+/* EXAMPLES */
+
+:first-child {
+    /* style all first child elements */
+}
+
+p:first-child {
+    /* style all first child <p> elements  */
+}
+
+div p:first-child {
+    /* style all first child <p> elements that are in a <div> */
+}
+```
+
+### Only Child Pseudo-selector
+
+```css
+A:only-child
+```
+
+Selects any element `A` that is the only element inside of another one. 
+
+```css
+/* EXAMPLES */
+
+span:only-child {
+    /* style the <span> elements that are the only child of some other element */
+}
+
+div p:only-child {
+    /* style the <p> inside any <div> so long as the <p> is the only one of its kind */
+}
+```
+
+### Last Child Pseudo-selector
+
+```css
+A:last-child
+```
+
+Selects any element `A` that is the last child of another element. You can use this selector to select an element that is the last child element inside of another element.
+
+```css
+:last-child {
+    /* style all last-child elements */
+}
+
+span:last-child {
+    /* style all last-child <span> elements */
+}
+
+ul li:last-child {
+    /* style the last <li> element inside every <ul> */
+}
+```
+
+### Nth Child Pseudo-selector
+
+```css
+:nth-child(A)
+```
+
+
+Selects the nth (i.e., 1st, 3rd, 12th, etc. child element in another element.
+
+```css
+/* EXAMPLES */
+
+:nth-child(8) {
+    /* style every element that is the 8th child of another element */
+}
+
+div p:nth-child(2) {
+    /* style the second <p> in every <div> */
+}
+```
+
+### Nth Last Child Selector
+
+```css
+:nth-last-child(A)
+```
+
+Selects the children from the bottom of the parent. This is like nth-child but counting from the back. 
+
+```css
+/* EXAMPLES */
+
+:nth-last-child(2) {
+    /* styles all second-to-last child elements */
+}
+```
+
+### First of Type Selector
+
+```css
+A:first-of-type
+```
+
+Selects the first element of type `A` within another element.
+
+```css
+/* EXAMPLES */
+
+span:first-of-type {
+    /* style the first <span> in any element */
+}
+```
+
+### Nth of Type 
+
+```css
+A:nth-of-type(num)
+```
+
+Selects an element of type `A` based on its order in another element (or `even` or `odd` instances of that element).
+
+```css
+/* EXAMPLES */
+
+div:nth-of-type(2) {
+    /* style the second instance of a <div> */
+}
+
+.example:nth-of-type(odd) {
+    /* style all odd instances of elements with class="example" */
+}
+```
+
+### Nth of Type Selector with Formula
+
+```css
+:nth-of-type(An+B)
+```
+
+The nth-of-type formula selects every nth element, starting the count at a specific instance of that element.
+
+```css
+/* EXAMPLES */
+
+span:nth-of-type(6n+2) {
+    /* style every 6th instance of a <span>, starting from (and including) the second instance */
+}
+```
+
+### Only of Type
+
+```css
+:only-of-type
+```
+
+Selects the only element of its type within another element.
+
+```css
+/* EXAMPLES */
+
+p span:only-of-type {
+    /* selects a <span> within any <p> if it is the only <span> in there */
+}
+```
+
+### Last of Type 
+
+```css
+:last-of-type
+```
+
+Selects each last element of that type within another element. 
+
+```css
+/* EXAMPLES */
+
+div:last-of-type {
+    /* styles the last <div> in every element */
+}
+
+p span:last-of-type {
+    /* styles the last <span> in every <p> */
+}
+```
+
+### Empty
+
+```css
+:empty
+```
+
+Selects elements that don't have any other elements inside of them.
+
+```css
+/* EXAMPLES */
+
+div:empty {
+    /* style all empty <div> elements */
+}
+```
+
+### Negation Pseudo-class
+
+```css
+:not(X)
+```
+
+Selects all elements that do not match the negation selector. 
+
+```css
+/* EXAMPLES */
+
+:not(#fancy) {
+    /* style all elements that do not have id="fancy" */
+}
+
+div:not(:first-child) {
+    /* style every <div> that is not a first child */
+}
+
+:not(.big, .medium) {
+    /* style all elements that do not have class="big" or class="medium" */
+}
+```
+
+### Attribute Selector (general)
+
+```css
+[attribute]
+```
+
+Selects all elements that have a specific attribute. Attributes appear inside the opening tag of an element. For example: `<span attribute="value"></span>`. An attribute does not always have a value, it can be blank.
+
+```css
+/* EXAMPLES */
+
+a[href] {
+    /* style all <a> elements that have an href attribute */
+}
+
+[type] {
+    /* style all elements that have a type attribute */
+}
+```
+
+### Attribute Selector (specific)
+
+```css
+A[attribute]
+```
+
+Selects all elements `A` that have a specific attribute. 
+
+```css
+/* EXAMPLES */
+
+[value] {
+    /* style all elements that have a value attribute */
+}
+
+a[href] {
+    /* style all <a> elements that have an href attribute */
+}
+
+input[disabled] {
+    /* styles all <input> elements with the disabled attribute */
+}
+```
+
+### Attribute Value Selector
+
+```css
+[attribute="value"]
+```
+
+Selects all elements that have a specific attribute value. Attribute selectors are case sensitive. 
+
+```css
+/* EXAMPLES */
+
+input[type="checkbox"] {
+    /* style all <input> elements with type="checkbox" */
+}
+```
+
+### Attribute Starts With Selector
+
+```css
+[attribute^="value"]
+```
+
+Selects all elements with an attribute value that starts with specific characters.
+
+```css
+/* EXAMPLE */
+
+.toy[category^="Swim"] {
+    /* style elements with class toy and with attribute category="Swim[...]" */
+}
+```
+
+### Attribute Ends with Selector
+
+```css
+[attribute$="value"]
+```
+
+Selects all elements with an attribute value that ends with specific characters.
+
+```css
+/* EXAMPLE */
+
+img[src$=".jpg"] {
+    /* style all images with a .jpg extension */
+}
+```
+
+### Attribute Wildcard Selector
+
+```css
+[attribute*="value"]
+```
+
+Selects all elements with an attribute value that contains specific characters. 
+
+```css
+/* EXAMPLES */
+
+img[src*="/thumbnails/"] {
+    /* style all image elements that show images from the "thumbnails" folder */
+}
+
+[class="heading"] {
+    /* style all elements with "heading" in their class, like class="main-heading" and class="sub-heading" */
+}
+```
 
 ## Level 1
 
@@ -58,7 +605,7 @@ Description
 
 <details><summary> Hint (or see <a href="#css-selector-descriptions-and-examples"> selector reference</a>)</summary>
 
-Hint
+Hint: 
 
 </details>
 
