@@ -39,6 +39,36 @@ Description
 
 ## CSS Selector Descriptions and Examples
 
+- [Type](#type)        
+- [ID Selector](#id-selector)        
+- [Descendant Selector](#descendant-selector)        
+- [Combine Descendant and ID Selectors](#combine-descendant-and-id-selectors)        
+- [Class Selector](#class-selector)        
+- [Combining the Class Selector with Other Selectors](#combining-the-class-selector-with-other-selectors)
+- [Combining Selectors with Commas](#combining-selectors-with-commas)        
+- [Universal Selector](#universal-selector)        
+- [Adjacent Sibling Selector](#adjacent-sibling-selector)        
+- [General Sibling Selector](#general-sibling-selector)        
+- [Child Selector](#child-selector)        
+- [First Child Pseudo-selector](#first-child-pseudo-selector)        
+- [Only Child Pseudo-selector](#only-child-pseudo-selector)        
+- [Last Child Pseudo-selector](#last-child-pseudo-selector)        
+- [Nth Child Pseudo-selector](#nth-child-pseudo-selector)        
+- [Nth Last Child Selector](#nth-last-child-selector)        
+- [First of Type Selector](#first-of-type-selector)        
+- [Nth of Type](#nth-of-type)        
+- [Nth of Type Selector with Formula](#nth-of-type-selector-with-formula)        
+- [Only of Type](#only-of-type)        
+- [Last of Type](#last-of-type)        
+- [Empty](#empty)        
+- [Negation Pseudo-class](#negation-pseudo-class)        
+- [Attribute Selector (general)](#attribute-selector-general)       
+- [Attribute Selector (specific)](#attribute-selector-specific)        
+- [Attribute Value Selector](#attribute-value-selector)        
+- [Attribute Starts With Selector](#attribute-starts-with-selector)        
+- [Attribute Ends with Selector](#attribute-ends-with-selector)        
+- [Attribute Wildcard Selector](#attribute-wildcard-selector)
+
 ### Type
 
 ```css
@@ -318,7 +348,7 @@ ul li:last-child {
 ```
 
 
-Selects the nth (i.e., 1st, 3rd, 12th, etc. child element in another element.
+Selects the nth (i.e., 1st, 3rd, 12th, etc.) child element in another element.
 
 ```css
 /* EXAMPLES */
@@ -605,14 +635,14 @@ img[src*="/thumbnails/"] {
 
 <details><summary> Hint (or see <a href="#css-selector-descriptions-and-examples"> selector reference</a>)</summary>
 
-Hint: 
+In the HTML, we see that each plate is represented by `<plate />`. How can we select an element by type?
 
 </details>
 
 <details><summary> CSS Viewer (i.e., possible solution(s))</summary>
 
 ```css
-CSSCONTENT
+plate
 ```
 
 </details>
@@ -635,14 +665,14 @@ CSSCONTENT
 
 <details><summary> Hint (or see <a href="#css-selector-descriptions-and-examples"> selector reference</a>)</summary>
 
-Hint
+Note how each bento box is represented by `<bento />` in the HTML. Is there a way to select elements by type?
 
 </details>
 
 <details><summary> CSS Viewer (i.e., possible solution(s))</summary>
 
 ```css
-CSSCONTENT
+bento
 ```
 
 </details>
@@ -665,14 +695,18 @@ CSSCONTENT
 
 <details><summary> Hint (or see <a href="#css-selector-descriptions-and-examples"> selector reference</a>)</summary>
 
-Hint
+Only one element in an HTML document should have a given `id`. How can you select an element by its `id`?
 
 </details>
 
 <details><summary> CSS Viewer (i.e., possible solution(s))</summary>
 
 ```css
-CSSCONTENT
+/* solution 1 */
+#fancy /* select any element with id="fancy" */
+
+/* solution 2 */
+plate#fancy /* select the plate element with id="fancy" */
 ```
 
 </details>
@@ -697,14 +731,14 @@ CSSCONTENT
 
 <details><summary> Hint (or see <a href="#css-selector-descriptions-and-examples"> selector reference</a>)</summary>
 
-Hint
+The apple is on the plate, and this implies that the apple is a descendent of the plate. How can you select a descendant `B` of an element `A`?
 
 </details>
 
 <details><summary> CSS Viewer (i.e., possible solution(s))</summary>
 
 ```css
-CSSCONTENT
+plate apple
 ```
 
 </details>
@@ -733,14 +767,14 @@ CSSCONTENT
 
 <details><summary> Hint (or see <a href="#css-selector-descriptions-and-examples"> selector reference</a>)</summary>
 
-Hint
+The HTML shows that the pickle is a descendant of the plate with `id=fancy`. 
 
 </details>
 
 <details><summary> CSS Viewer (i.e., possible solution(s))</summary>
 
 ```css
-CSSCONTENT
+#fancy pickle
 ```
 
 </details>
@@ -766,14 +800,14 @@ CSSCONTENT
 
 <details><summary> Hint (or see <a href="#css-selector-descriptions-and-examples"> selector reference</a>)</summary>
 
-Hint
+TBD
 
 </details>
 
 <details><summary> CSS Viewer (i.e., possible solution(s))</summary>
 
 ```css
-CSSCONTENT
+apple.small
 ```
 
 </details>
@@ -811,7 +845,7 @@ Hint
 <details><summary> CSS Viewer (i.e., possible solution(s))</summary>
 
 ```css
-CSSCONTENT
+orange.small
 ```
 
 </details>
@@ -851,7 +885,7 @@ Hint
 <details><summary> CSS Viewer (i.e., possible solution(s))</summary>
 
 ```css
-CSSCONTENT
+bento orange.small
 ```
 
 </details>
@@ -891,7 +925,7 @@ Hint
 <details><summary> CSS Viewer (i.e., possible solution(s))</summary>
 
 ```css
-CSSCONTENT
+plate, bento
 ```
 
 </details>
@@ -927,7 +961,7 @@ Hint
 <details><summary> CSS Viewer (i.e., possible solution(s))</summary>
 
 ```css
-CSSCONTENT
+*
 ```
 
 </details>
@@ -964,7 +998,7 @@ Hint
 <details><summary> CSS Viewer (i.e., possible solution(s))</summary>
 
 ```css
-CSSCONTENT
+plate *
 ```
 
 </details>
@@ -1000,7 +1034,7 @@ Hint
 <details><summary> CSS Viewer (i.e., possible solution(s))</summary>
 
 ```css
-CSSCONTENT
+plate + apple
 ```
 
 </details>
@@ -1039,7 +1073,7 @@ Hint
 <details><summary> CSS Viewer (i.e., possible solution(s))</summary>
 
 ```css
-CSSCONTENT
+bento ~ pickle
 ```
 
 </details>
@@ -1077,7 +1111,7 @@ Hint
 <details><summary> CSS Viewer (i.e., possible solution(s))</summary>
 
 ```css
-CSSCONTENT
+plate > apple
 ```
 
 </details>
@@ -1112,7 +1146,7 @@ Hint
 <details><summary> CSS Viewer (i.e., possible solution(s))</summary>
 
 ```css
-CSSCONTENT
+orange:first-child
 ```
 
 </details>
@@ -1153,7 +1187,7 @@ Hint
 <details><summary> CSS Viewer (i.e., possible solution(s))</summary>
 
 ```css
-CSSCONTENT
+apple:only-child, plate pickle:only-child
 ```
 
 </details>
@@ -1189,7 +1223,7 @@ Hint
 <details><summary> CSS Viewer (i.e., possible solution(s))</summary>
 
 ```css
-CSSCONTENT
+plate#fancy apple:last-child, pickle:last-child
 ```
 
 </details>
@@ -1220,7 +1254,7 @@ Hint
 <details><summary> CSS Viewer (i.e., possible solution(s))</summary>
 
 ```css
-CSSCONTENT
+plate:nth-child(3)
 ```
 
 </details>
@@ -1255,7 +1289,7 @@ Hint
 <details><summary> CSS Viewer (i.e., possible solution(s))</summary>
 
 ```css
-CSSCONTENT
+bento:nth-last-child(3)
 ```
 
 </details>
@@ -1291,7 +1325,7 @@ Hint
 <details><summary> CSS Viewer (i.e., possible solution(s))</summary>
 
 ```css
-CSSCONTENT
+apple:first-of-type
 ```
 
 </details>
@@ -1324,7 +1358,7 @@ Hint
 <details><summary> CSS Viewer (i.e., possible solution(s))</summary>
 
 ```css
-CSSCONTENT
+plate:nth-of-type(even)
 ```
 
 </details>
@@ -1363,7 +1397,7 @@ Hint
 <details><summary> CSS Viewer (i.e., possible solution(s))</summary>
 
 ```css
-CSSCONTENT
+plate:nth-of-type(2n+3)
 ```
 
 </details>
@@ -1400,7 +1434,7 @@ Hint
 <details><summary> CSS Viewer (i.e., possible solution(s))</summary>
 
 ```css
-CSSCONTENT
+plate > apple.small:only-of-type
 ```
 
 </details>
@@ -1433,7 +1467,7 @@ Hint
 <details><summary> CSS Viewer (i.e., possible solution(s))</summary>
 
 ```css
-CSSCONTENT
+orange.small:last-of-type, apple.small:last-of-type
 ```
 
 </details>
@@ -1466,7 +1500,7 @@ Hint
 <details><summary> CSS Viewer (i.e., possible solution(s))</summary>
 
 ```css
-CSSCONTENT
+bento:empty
 ```
 
 </details>
@@ -1504,7 +1538,7 @@ Hint
 <details><summary> CSS Viewer (i.e., possible solution(s))</summary>
 
 ```css
-CSSCONTENT
+apple:not(apple.small)
 ```
 
 </details>
@@ -1542,7 +1576,7 @@ Hint
 <details><summary> CSS Viewer (i.e., possible solution(s))</summary>
 
 ```css
-CSSCONTENT
+*[for]
 ```
 
 </details>
@@ -1579,7 +1613,7 @@ Hint
 <details><summary> CSS Viewer (i.e., possible solution(s))</summary>
 
 ```css
-CSSCONTENT
+plate[for]
 ```
 
 </details>
@@ -1614,7 +1648,7 @@ Hint
 <details><summary> CSS Viewer (i.e., possible solution(s))</summary>
 
 ```css
-CSSCONTENT
+bento[for="Vitaly"]
 ```
 
 </details>
@@ -1650,7 +1684,7 @@ Hint
 <details><summary> CSS Viewer (i.e., possible solution(s))</summary>
 
 ```css
-CSSCONTENT
+*[for^="Sa"]
 ```
 
 </details>
@@ -1686,7 +1720,7 @@ Hint
 <details><summary> CSS Viewer (i.e., possible solution(s))</summary>
 
 ```css
-CSSCONTENT
+*[for$="ato"]
 ```
 
 </details>
@@ -1722,7 +1756,7 @@ Hint
 <details><summary> CSS Viewer (i.e., possible solution(s))</summary>
 
 ```css
-CSSCONTENT
+bento[for*="obb"]
 ```
 
 </details>
