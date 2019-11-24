@@ -1,8 +1,18 @@
 # CSS Diner
 
-Description
+**Note:** Everything in this document is based off of the [CSS Diner](http://flukeout.github.io/) game intended to help developers become more familiar with CSS selectors. This "companion" is simply meant to be used as a supplement/reference.
 
-## Contents
+**Goal of game:** Select the "wiggling items" using CSS selectors.
+
+**Selectors:** Go to the [CSS selector descriptions and examples](#css-selector-descriptions-and-examples) section to refresh your memory on a variety of CSS selectors.
+
+**Usage:** For any given level, you are provided with a `.gif` illustrating what you are trying to select. Here is how you should go about using this companion if you do not simply go [the site](http://flukeout.github.io/) hosting the game:
+1. **Watch:** Watch the `.gif` to see what is wiggling.
+2. **HTML Viewer:** Open (i.e., click) the `HTML Viewer` to see what HTML actually makes up the `.gif` you saw in Step 1. This will be important because you will be trying to target or select *named* elements, and you may need to see the HTML to deduce these elements' names, what classes or attributes they may have, etc.
+3. **Hint:** Click the `Hint` if you need a nudge in the right direction. What you find in the hint will often be phraseology that more or less points you to a specific part of the [CSS selector descriptions and examples](#css-selector-descriptions-and-examples) section.
+4. **CSS Viewer:** Click the `CSS Viewer` to see one (or more) potential solutions. You may come up with completely different solutions! If so, consider making a pull request to this repo with your additional solution formatted as seen in the provided solution(s). 
+
+## Levels
 
 - [Level 1](#level-1)    
 - [Level 2](#level-2)    
@@ -77,6 +87,8 @@ A
 
 Selects all elements of type `A`. Type refers to the type of tag, so `<div>`, `<p>`, and `<ul>` are all different element types. 
 
+<details><summary> Example(s)</summary>
+
 ```css
 /* EXAMPLES */
 
@@ -89,6 +101,8 @@ p {
 }
 ```
 
+</details>
+
 ### ID Selector
 
 ```css
@@ -96,6 +110,8 @@ p {
 ```
 
 Selects an element with a specific `id`. 
+
+<details><summary> Example(s)</summary>
 
 ```css
 /* EXAMPLES */
@@ -111,6 +127,8 @@ ul#long {
 }
 ```
 
+</details>
+
 ### Descendant Selector
 
 ```css
@@ -118,6 +136,8 @@ A B
 ```
 
 Selects all elements `B` that are children of `A`; that is, `A B` is how you select an element(s) `B` that is inside another element `A`.
+
+<details><summary> Example(s)</summary>
 
 ```css
 /* EXAMPLES */
@@ -131,6 +151,8 @@ p strong {
 }
 ```
 
+</details>
+
 ### Combine Descendant and ID Selectors
 
 ```css
@@ -138,6 +160,8 @@ p strong {
 ```
 
 You can combine any selector with the descendant selector.
+
+<details><summary> Example(s)</summary>
 
 ```css
 /* EXAMPLE */
@@ -147,6 +171,8 @@ You can combine any selector with the descendant selector.
 }
 ```
 
+</details>
+
 ### Class Selector
 
 ```css
@@ -154,6 +180,8 @@ You can combine any selector with the descendant selector.
 ```
 
 Select elements by their class. The class selector selects all elements with that class attribute. Elements can only have one ID, but many classes.
+
+<details><summary> Example(s)</summary>
 
 ```css
 /* EXAMPLE */
@@ -163,6 +191,8 @@ Select elements by their class. The class selector selects all elements with tha
 }
 ```
 
+</details>
+
 ### Combining the Class Selector with Other Selectors
 
 ```css
@@ -170,6 +200,8 @@ A.className
 ```
 
 You can combine the class selector with other selectors, like the type selector.
+
+<details><summary> Example(s)</summary>
 
 ```css
 /* EXAMPLES */
@@ -183,6 +215,8 @@ ul.important {
 }
 ```
 
+</details>
+
 ### Combining Selectors with Commas
 
 ```css
@@ -190,6 +224,8 @@ A, B
 ```
 
 You can select all `A` and `B` elements (or all `A`, `B`, and `C` elements with `A, B, C`, etc.). 
+
+<details><summary> Example(s)</summary>
 
 ```css
 /* EXAMPLES */
@@ -203,6 +239,8 @@ a, p, div {
 }
 ```
 
+</details>
+
 ### Universal Selector 
 
 ```css
@@ -210,6 +248,8 @@ a, p, div {
 ```
 
 You can select all elements with the universal selector `*` (also known as a wildcard).
+
+<details><summary> Example(s)</summary>
 
 ```css
 /* EXAMPLES */
@@ -223,6 +263,8 @@ ul.fancy * {
 }
 ```
 
+</details>
+
 ### Adjacent Sibling Selector
 
 ```css
@@ -230,6 +272,8 @@ A + B
 ```
 
 This selects all `B` elements that direct follow `A` elements. Elements that follow one another are called siblings. They're on the same level or depth. In the HTML markup, elements that are siblings should have the same indentation level.
+
+<details><summary> Example(s)</summary>
 
 ```css
 /* EXAMPLES */
@@ -243,6 +287,8 @@ div + a {
 }
 ```
 
+</details>
+
 ### General Sibling Selector
 
 ```css
@@ -250,6 +296,8 @@ A ~ B
 ```
 
 Selects all elements `B` that follow an element `A`; that is, you can select all siblings of an element that follow it. This is sort of like the adjacent sibling selector (i.e., `A + B`) except `A ~ B` gets *all* of the following sibling elements instead of just the direct next one. 
+
+<details><summary> Example(s)</summary>
 
 ```css
 /* EXAMPLE */
@@ -259,6 +307,8 @@ div.main-intro ~ p {
 }
 ```
 
+</details>
+
 ### Child Selector
 
 ```css
@@ -266,6 +316,8 @@ A > B
 ```
 
 Selects all `B` that are direct children of `A`. You can select elements that are direct children of other elements. A child element is any element that is nested directly in another element. Elements that are nested deeper than that are called descendant elements.
+
+<details><summary> Example(s)</summary>
 
 ```css
 /* EXAMPLE */
@@ -275,6 +327,8 @@ div#container > ul {
 }
 ```
 
+</details>
+
 ### First Child Pseudo-selector
 
 ```css
@@ -282,6 +336,8 @@ A:first-child
 ```
 
 Selects all first-child elements that are of type `A`. A child element is any element that is directly nested in another element. You can combine this pseudo-selector with other selectors.
+
+<details><summary> Example(s)</summary>
 
 ```css
 /* EXAMPLES */
@@ -299,6 +355,8 @@ div p:first-child {
 }
 ```
 
+</details>
+
 ### Only Child Pseudo-selector
 
 ```css
@@ -306,6 +364,8 @@ A:only-child
 ```
 
 Selects any element `A` that is the only element inside of another one. 
+
+<details><summary> Example(s)</summary>
 
 ```css
 /* EXAMPLES */
@@ -319,6 +379,8 @@ div p:only-child {
 }
 ```
 
+</details>
+
 ### Last Child Pseudo-selector
 
 ```css
@@ -326,6 +388,8 @@ A:last-child
 ```
 
 Selects any element `A` that is the last child of another element. You can use this selector to select an element that is the last child element inside of another element.
+
+<details><summary> Example(s)</summary>
 
 ```css
 :last-child {
@@ -341,6 +405,8 @@ ul li:last-child {
 }
 ```
 
+</details>
+
 ### Nth Child Pseudo-selector
 
 ```css
@@ -349,6 +415,8 @@ ul li:last-child {
 
 
 Selects the nth (i.e., 1st, 3rd, 12th, etc.) child element in another element.
+
+<details><summary> Example(s)</summary>
 
 ```css
 /* EXAMPLES */
@@ -362,6 +430,8 @@ div p:nth-child(2) {
 }
 ```
 
+</details>
+
 ### Nth Last Child Selector
 
 ```css
@@ -370,13 +440,17 @@ div p:nth-child(2) {
 
 Selects the children from the bottom of the parent. This is like nth-child but counting from the back. 
 
+<details><summary> Example(s)</summary>
+
 ```css
-/* EXAMPLES */
+/* EXAMPLE */
 
 :nth-last-child(2) {
     /* styles all second-to-last child elements */
 }
 ```
+
+</details>
 
 ### First of Type Selector
 
@@ -386,13 +460,17 @@ A:first-of-type
 
 Selects the first element of type `A` within another element.
 
+<details><summary> Example(s)</summary>
+
 ```css
-/* EXAMPLES */
+/* EXAMPLES*/
 
 span:first-of-type {
     /* style the first <span> in any element */
 }
 ```
+
+</details>
 
 ### Nth of Type 
 
@@ -401,6 +479,8 @@ A:nth-of-type(num)
 ```
 
 Selects an element of type `A` based on its order in another element (or `even` or `odd` instances of that element).
+
+<details><summary> Example(s)</summary>
 
 ```css
 /* EXAMPLES */
@@ -414,6 +494,8 @@ div:nth-of-type(2) {
 }
 ```
 
+</details>
+
 ### Nth of Type Selector with Formula
 
 ```css
@@ -422,13 +504,17 @@ div:nth-of-type(2) {
 
 The nth-of-type formula selects every nth element, starting the count at a specific instance of that element.
 
+<details><summary> Example(s)</summary>
+
 ```css
-/* EXAMPLES */
+/* EXAMPLE */
 
 span:nth-of-type(6n+2) {
     /* style every 6th instance of a <span>, starting from (and including) the second instance */
 }
 ```
+
+</details>
 
 ### Only of Type
 
@@ -438,13 +524,17 @@ span:nth-of-type(6n+2) {
 
 Selects the only element of its type within another element.
 
+<details><summary> Example(s)</summary>
+
 ```css
-/* EXAMPLES */
+/* EXAMPLE */
 
 p span:only-of-type {
     /* selects a <span> within any <p> if it is the only <span> in there */
 }
 ```
+
+</details>
 
 ### Last of Type 
 
@@ -453,6 +543,8 @@ p span:only-of-type {
 ```
 
 Selects each last element of that type within another element. 
+
+<details><summary> Example(s)</summary>
 
 ```css
 /* EXAMPLES */
@@ -466,6 +558,8 @@ p span:last-of-type {
 }
 ```
 
+</details>
+
 ### Empty
 
 ```css
@@ -474,13 +568,17 @@ p span:last-of-type {
 
 Selects elements that don't have any other elements inside of them.
 
+<details><summary> Example(s)</summary>
+
 ```css
-/* EXAMPLES */
+/* EXAMPLE */
 
 div:empty {
     /* style all empty <div> elements */
 }
 ```
+
+</details>
 
 ### Negation Pseudo-class
 
@@ -489,6 +587,8 @@ div:empty {
 ```
 
 Selects all elements that do not match the negation selector. 
+
+<details><summary> Example(s)</summary>
 
 ```css
 /* EXAMPLES */
@@ -506,6 +606,8 @@ div:not(:first-child) {
 }
 ```
 
+</details>
+
 ### Attribute Selector (general)
 
 ```css
@@ -513,6 +615,8 @@ div:not(:first-child) {
 ```
 
 Selects all elements that have a specific attribute. Attributes appear inside the opening tag of an element. For example: `<span attribute="value"></span>`. An attribute does not always have a value, it can be blank.
+
+<details><summary> Example(s)</summary>
 
 ```css
 /* EXAMPLES */
@@ -526,6 +630,8 @@ a[href] {
 }
 ```
 
+</details>
+
 ### Attribute Selector (specific)
 
 ```css
@@ -533,6 +639,8 @@ A[attribute]
 ```
 
 Selects all elements `A` that have a specific attribute. 
+
+<details><summary> Example(s)</summary>
 
 ```css
 /* EXAMPLES */
@@ -550,6 +658,8 @@ input[disabled] {
 }
 ```
 
+</details>
+
 ### Attribute Value Selector
 
 ```css
@@ -558,13 +668,17 @@ input[disabled] {
 
 Selects all elements that have a specific attribute value. Attribute selectors are case sensitive. 
 
+<details><summary> Example(s)</summary>
+
 ```css
-/* EXAMPLES */
+/* EXAMPLE */
 
 input[type="checkbox"] {
     /* style all <input> elements with type="checkbox" */
 }
 ```
+
+</details>
 
 ### Attribute Starts With Selector
 
@@ -574,6 +688,8 @@ input[type="checkbox"] {
 
 Selects all elements with an attribute value that starts with specific characters.
 
+<details><summary> Example(s)</summary>
+
 ```css
 /* EXAMPLE */
 
@@ -581,6 +697,8 @@ Selects all elements with an attribute value that starts with specific character
     /* style elements with class toy and with attribute category="Swim[...]" */
 }
 ```
+
+</details>
 
 ### Attribute Ends with Selector
 
@@ -590,6 +708,8 @@ Selects all elements with an attribute value that starts with specific character
 
 Selects all elements with an attribute value that ends with specific characters.
 
+<details><summary> Example(s)</summary>
+
 ```css
 /* EXAMPLE */
 
@@ -598,6 +718,8 @@ img[src$=".jpg"] {
 }
 ```
 
+</details>
+
 ### Attribute Wildcard Selector
 
 ```css
@@ -605,6 +727,8 @@ img[src$=".jpg"] {
 ```
 
 Selects all elements with an attribute value that contains specific characters. 
+
+<details><summary> Example(s)</summary>
 
 ```css
 /* EXAMPLES */
@@ -617,6 +741,8 @@ img[src*="/thumbnails/"] {
     /* style all elements with "heading" in their class, like class="main-heading" and class="sub-heading" */
 }
 ```
+
+</details>
 
 ## Level 1
 
@@ -800,7 +926,7 @@ The HTML shows that the pickle is a descendant of the plate with `id=fancy`.
 
 <details><summary> Hint (or see <a href="#css-selector-descriptions-and-examples"> selector reference</a>)</summary>
 
-TBD
+Do the small apples share a common class name?
 
 </details>
 
@@ -838,7 +964,7 @@ apple.small
 
 <details><summary> Hint (or see <a href="#css-selector-descriptions-and-examples"> selector reference</a>)</summary>
 
-Hint
+We do not want to select all objects with a class of `small`. Can we select only the oranges that have a class of `small` though?
 
 </details>
 
@@ -878,7 +1004,7 @@ orange.small
 
 <details><summary> Hint (or see <a href="#css-selector-descriptions-and-examples"> selector reference</a>)</summary>
 
-Hint
+We want the small oranges on bentos. How can we target what is on a bento? How can we target properties of what are on bentos? 
 
 </details>
 
@@ -918,7 +1044,7 @@ bento orange.small
 
 <details><summary> Hint (or see <a href="#css-selector-descriptions-and-examples"> selector reference</a>)</summary>
 
-Hint
+How can we select multiple elements at once?
 
 </details>
 
@@ -954,7 +1080,7 @@ plate, bento
 
 <details><summary> Hint (or see <a href="#css-selector-descriptions-and-examples"> selector reference</a>)</summary>
 
-Hint
+Is it possible for us to select everything at once?
 
 </details>
 
@@ -991,7 +1117,7 @@ Hint
 
 <details><summary> Hint (or see <a href="#css-selector-descriptions-and-examples"> selector reference</a>)</summary>
 
-Hint
+How can we select all of the children of an element?
 
 </details>
 
@@ -1027,7 +1153,7 @@ plate *
 
 <details><summary> Hint (or see <a href="#css-selector-descriptions-and-examples"> selector reference</a>)</summary>
 
-Hint
+How can we select each `apple` that is directly adjacent to a `plate`?
 
 </details>
 
@@ -1066,7 +1192,7 @@ plate + apple
 
 <details><summary> Hint (or see <a href="#css-selector-descriptions-and-examples"> selector reference</a>)</summary>
 
-Hint
+We want to select *all* of the `pickle` siblings after the `bento`.
 
 </details>
 
@@ -1104,7 +1230,7 @@ bento ~ pickle
 
 <details><summary> Hint (or see <a href="#css-selector-descriptions-and-examples"> selector reference</a>)</summary>
 
-Hint
+We do not want to select just any apple that is on a plate--we want to select the apple that is *directly* on the plate.
 
 </details>
 
@@ -1139,14 +1265,14 @@ plate > apple
 
 <details><summary> Hint (or see <a href="#css-selector-descriptions-and-examples"> selector reference</a>)</summary>
 
-Hint
+We know we want to select the `orange` that is the *first child* of the *plate*. A pseudo-selector may be appropriate here ....
 
 </details>
 
 <details><summary> CSS Viewer (i.e., possible solution(s))</summary>
 
 ```css
-orange:first-child
+plate orange:first-child
 ```
 
 </details>
@@ -1180,14 +1306,14 @@ orange:first-child
 
 <details><summary> Hint (or see <a href="#css-selector-descriptions-and-examples"> selector reference</a>)</summary>
 
-Hint
+How can we select multiple things at once? How can we select the *only* child of an element?
 
 </details>
 
 <details><summary> CSS Viewer (i.e., possible solution(s))</summary>
 
 ```css
-apple:only-child, plate pickle:only-child
+plate apple:only-child, plate pickle:only-child
 ```
 
 </details>
@@ -1216,14 +1342,20 @@ apple:only-child, plate pickle:only-child
 
 <details><summary> Hint (or see <a href="#css-selector-descriptions-and-examples"> selector reference</a>)</summary>
 
-Hint
+There are multiple ways to do this. One somewhat contrived way is to think that the `apple` is the *last child* of the fancy `plate` and that the `pickle` is also, in some sense, the *last child* of its kind.
+
+Alternatively, we really just want the child of the fancy `plate` that is an `apple` that is `small` as well as the `pickle` that is `small`.
 
 </details>
 
 <details><summary> CSS Viewer (i.e., possible solution(s))</summary>
 
 ```css
-plate#fancy apple:last-child, pickle:last-child
+/* Solution 1 */
+plate#fancy apple:last-child, pickle:last-child /* contrived */
+
+/* Solution 2 */
+#fancy apple.small, pickle.small /* realistic */
 ```
 
 </details>
@@ -1247,7 +1379,7 @@ plate#fancy apple:last-child, pickle:last-child
 
 <details><summary> Hint (or see <a href="#css-selector-descriptions-and-examples"> selector reference</a>)</summary>
 
-Hint
+Is it possible for us to select a specific child of a certain element?
 
 </details>
 
@@ -1282,7 +1414,7 @@ plate:nth-child(3)
 
 <details><summary> Hint (or see <a href="#css-selector-descriptions-and-examples"> selector reference</a>)</summary>
 
-Hint
+It may be obvious to use `bento:first-of-type` here, but can we conjure up a more contrived solution such as counting from the back? For example, counting from the last `bento`, we see that the `bento` we want to select is really the third child. How can we select this `bento` in terms of "last children"?
 
 </details>
 
@@ -1318,7 +1450,7 @@ bento:nth-last-child(3)
 
 <details><summary> Hint (or see <a href="#css-selector-descriptions-and-examples"> selector reference</a>)</summary>
 
-Hint
+Is it possible for us to select the first element that is of a certain type?
 
 </details>
 
@@ -1351,7 +1483,7 @@ apple:first-of-type
 
 <details><summary> Hint (or see <a href="#css-selector-descriptions-and-examples"> selector reference</a>)</summary>
 
-Hint
+How can we use the pseduo-selector `nth-of-type` to our advantage here? What kinds of parameters does this pseudo-selector accept?
 
 </details>
 
@@ -1390,7 +1522,9 @@ plate:nth-of-type(even)
 
 <details><summary> Hint (or see <a href="#css-selector-descriptions-and-examples"> selector reference</a>)</summary>
 
-Hint
+Can we specify a selection pattern for certain types? That is, can we do something of the following sort: "Select every 4th instance of `plate`, starting at instance 2?" 
+
+Way we would write the above is `plate:nth-of-type(4n+2)`
 
 </details>
 
@@ -1427,14 +1561,14 @@ plate:nth-of-type(2n+3)
 
 <details><summary> Hint (or see <a href="#css-selector-descriptions-and-examples"> selector reference</a>)</summary>
 
-Hint
+Is it possible to select a plate that only has a *single* child of the `apple` type?
 
 </details>
 
 <details><summary> CSS Viewer (i.e., possible solution(s))</summary>
 
 ```css
-plate > apple.small:only-of-type
+plate > apple:only-of-type
 ```
 
 </details>
@@ -1460,14 +1594,14 @@ plate > apple.small:only-of-type
 
 <details><summary> Hint (or see <a href="#css-selector-descriptions-and-examples"> selector reference</a>)</summary>
 
-Hint
+How can we select multiple elements that are the last of their type?
 
 </details>
 
 <details><summary> CSS Viewer (i.e., possible solution(s))</summary>
 
 ```css
-orange.small:last-of-type, apple.small:last-of-type
+orange:last-of-type, apple:last-of-type
 ```
 
 </details>
@@ -1493,7 +1627,7 @@ orange.small:last-of-type, apple.small:last-of-type
 
 <details><summary> Hint (or see <a href="#css-selector-descriptions-and-examples"> selector reference</a>)</summary>
 
-Hint
+Is it possible for us to select all types of an element that do not have children (i.e., are empty)?
 
 </details>
 
@@ -1531,14 +1665,14 @@ bento:empty
 
 <details><summary> Hint (or see <a href="#css-selector-descriptions-and-examples"> selector reference</a>)</summary>
 
-Hint
+Is it possible to select an element type that does *not* have a certain class?
 
 </details>
 
 <details><summary> CSS Viewer (i.e., possible solution(s))</summary>
 
 ```css
-apple:not(apple.small)
+apple:not(.small)
 ```
 
 </details>
@@ -1569,14 +1703,14 @@ apple:not(apple.small)
 
 <details><summary> Hint (or see <a href="#css-selector-descriptions-and-examples"> selector reference</a>)</summary>
 
-Hint
+Is it possible to select general elements based on whether or not those elements have certain attributes?
 
 </details>
 
 <details><summary> CSS Viewer (i.e., possible solution(s))</summary>
 
 ```css
-*[for]
+[for]
 ```
 
 </details>
@@ -1606,7 +1740,7 @@ Hint
 
 <details><summary> Hint (or see <a href="#css-selector-descriptions-and-examples"> selector reference</a>)</summary>
 
-Hint
+Is it possible to select only specific elements that have certain attributes?
 
 </details>
 
@@ -1641,7 +1775,7 @@ plate[for]
 
 <details><summary> Hint (or see <a href="#css-selector-descriptions-and-examples"> selector reference</a>)</summary>
 
-Hint
+Is it possible to select an element not only based on it having a certain attribute but also the value of that attribute?
 
 </details>
 
@@ -1677,7 +1811,7 @@ bento[for="Vitaly"]
 
 <details><summary> Hint (or see <a href="#css-selector-descriptions-and-examples"> selector reference</a>)</summary>
 
-Hint
+Is it possible to select elements that have an attribute whose value *starts* with a specified set of characters?
 
 </details>
 
@@ -1713,7 +1847,7 @@ Hint
 
 <details><summary> Hint (or see <a href="#css-selector-descriptions-and-examples"> selector reference</a>)</summary>
 
-Hint
+Is it possible to select elements that have an attribute whose value *ends* with a specified set of characters?
 
 </details>
 
@@ -1749,7 +1883,7 @@ Hint
 
 <details><summary> Hint (or see <a href="#css-selector-descriptions-and-examples"> selector reference</a>)</summary>
 
-Hint
+Is it possible to select elements that have an attribute whose value *contains* a specified set of characters?
 
 </details>
 
@@ -1760,4 +1894,3 @@ bento[for*="obb"]
 ```
 
 </details>
-
